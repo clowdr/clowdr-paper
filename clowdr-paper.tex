@@ -41,10 +41,30 @@ The authors declare no conflicts of interest in this work.}
 % \correspondingauthor{\textsuperscript{2}To whom correspondence should be addressed. E-mail: greg.kiar\@mcgill.ca}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
-\keywords{Keyword 1 $|$ Keyword 2 $|$ Keyword 3 $|$ ...} 
+\keywords{Computation $|$ Pipelines $|$ Neuroinformatics $|$ Provenance $|$ Cloud computing $|$ Data sharing} 
 
 \begin{abstract}
-Please provide an abstract of no more than 250 words in a single paragraph. Abstracts should explain to the general reader the major contributions of the article. References in the abstract must be cited in full within the abstract itself and cited in the text.
+In recent years, neuroimaging has undergone an explosion in the collection and public dissemination of datasets.
+In similar fashion, an explosion of software tools and computational pipelines have emerged which can perform a huge variety of analyses on these complex data.
+The processing and exploration of these datasets has potential to fuel numerous scientific breakthroughs including models of structure and function of both the diseased and healthy human brain.
+Currently, applying pipelines to analyze this data harmoniously (i.e. each sample is processed consistently, a requirement for pooling data), is both computationally expensive and requires either significant computational expertise or heavy reliance on third-party services and platforms such as CBRAIN, OpenNeuro, or others.
+
+Leveraging emerging standards for data (BIDS) and tool (Boutiques) organization, we have developed Clowdr, a micro-service based open-source tool for launching computational pipelines in high performance computing (HPC) environments.
+We demonstrate this tool using the Amazon Web Services (AWS) Cloud.
+As a result, scientists can now deploy their pipelines at scale using a turn-key application from the command-line, drastically shortening the feedback loop between tool development or data collection and obtaining harmoniously processed results.
+
+Clowdr was written in Python and initially developed for the AWS Cloud.
+The micro-service based nature of this tool does not require Clowdr to be installed on the target system, increasing its portability.
+Clowdr applications require four user inputs: data, tool, invocation, and credentials.
+
+Clowdr is a publicly available, open-source, turn-key solution for deploying pipelines and analyses in the cloud.
+Future work on this tool will include the support of additional platforms and computational ecosystems.
+By supporting common APIs, such as CARMIN, the hope is that Clowdr will be able to provide an interface to many computational environments.
+Clowdr will also support arbitrarily complex data organizations and command-line formats through regular expression mapping.
+As Clowdr aims to streamline the process between development, deployment, and publishing of tools and analyses, it will contain two additional modes of operation: dev, and publish.
+The dev mode will enable users to launch their analysis locally on a single sample/session of data, so that they can refine their parameter settings or invocations prior to deploying at scale.
+The publish mode will enable users to launch a light-weight webserver for exploring their data and derivatives, including visualizing provenance traces and quality control figures, and launching new analyses from the web.
+Paired with the existing run mode which deploys analyses at scale on cloud resources, Clowdr will provide users with an end-to-end analysis environment.
 \end{abstract}
 
 \dates{This manuscript was compiled on \today}
