@@ -39,6 +39,12 @@ Assuming you have Docker or Singularity installed locally, and are running the e
 
 You can interpret this command as follows: `local` means that the analysis will be run sequentially on the local system. `bids-example-descriptor.json` is the name of the tool description. `bids-example-invocation.json` is the set of invocation properties to be used in analysis. `./task/` is the output directory for Clowdr summary information, equivalent to what is stored in the `bids-example/` directory here. `-bV` controls both the `--bids` flag and `--verbose`, meaning that the invocation will be interpreted as a BIDS app and log outputs will be printed to the terminal, respectively. `-g 4` is the `--group` flag which groups four tasks at a time to be launched by Clowdr. `-v /data/ds114/:/data/ds114/` mounts the `/data/ds114/` directory of the host system to the Docker or Singularity container, at the same location.
 
+The visualiation of results can then be performed with the following line, where the `<clowdr-location>` value is replaced with the full path to the directory created by Clowdr within `./task/` for your experiment.
+
+    clowdr share <clowdr-location>
+
+This will print the URL [http://127.0.0.1:8050/](http://127.0.0.1:8050/) to your terminal, which you can navigate to for exploring your dataset and exporting figures.
+
 
 #### Reprozip around containerized tools
 
