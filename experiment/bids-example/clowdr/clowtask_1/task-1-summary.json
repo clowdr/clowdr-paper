@@ -1,0 +1,10 @@
+{
+    "duration": 15.37937879562378,
+    "exitcode": 0,
+    "outputs": [
+        "/data/ds114/derivatives/bids-example/"
+    ],
+    "stderr": "/Users/gkiar/code/gkiar/clowdr/examples/task/2018-08-06_14-17-49-C2ZEUSKV/clowdr/task-1-stderr.txt",
+    "stdout": "/Users/gkiar/code/gkiar/clowdr/examples/task/2018-08-06_14-17-49-C2ZEUSKV/clowdr/task-1-stdout.txt",
+    "usage": "/Users/gkiar/code/gkiar/clowdr/examples/task/2018-08-06_14-17-49-C2ZEUSKV/clowdr/task-1-usage.csv"
+}
