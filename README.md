@@ -9,12 +9,24 @@ Repository contents: latex source (`doc/`), and replication materials (`experime
 The following instructions have been tested on Mac OSX, but are expected to run equivalently on Linux. For Windows machines, these can either a) be run within the Ubuntu shell (if available), b) a Docker container, or c) a virtual machine.
 
 
-#### Install Clowdr
+### Install Clowdr
 
 To install the version of Clowdr run in this paper, ensure that you have Python3 and the corresponding `pip` package installed, and then run:
 
     pip install clowdr==0.1.0
 
+
+### Replication 1: Visualizing HCP experiment
+
+Presented in Figure 3 within the manuscript was an analysis of a subset of the HCP dataset as processed with the ndmg pipeline. The summary of this execution can be visualized using the following command:
+
+    clowdr share ./experiment/hcp/clowdr/clowdr-summary.json
+
+Then, navigate in your web browser to [0.0.0.0:8050](0.0.0.0:8050) to view and interact with the figures.
+
+### Replication 2: Processing BIDS data.
+
+To get a sense of the entire Clowdr workflow from scratch, you can also follow the guide below to run your own Clowdr experiment.
 
 #### Downloading data
 
